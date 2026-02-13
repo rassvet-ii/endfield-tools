@@ -1,0 +1,189 @@
+@theme {
+  --grid-span-span-1: span 1;
+  --grid-span-span-2: span 2;
+  --grid-span-span-3: span 3;
+  --grid-span-span-4: span 4;
+  --grid-span-span-5: span 5;
+  --grid-area-start-span-full: 1;
+  --grid-area-end-span-full: -1;
+}
+
+@utility col-* {
+  grid-column: --value(integer) / --modifier(integer, --grid-span-*);
+}
+
+@utility col-span-* {
+  grid-column: span --value(integer) / --modifier(integer, --grid-span-*);
+}
+
+@utility row-* {
+  grid-row: --value(integer) / --modifier(integer, --grid-span-*);
+}
+
+@utility row-span-* {
+  grid-row: span --value(integer) / --modifier(integer, --grid-span-*);
+}
+
+@utility area-* {
+  grid-area: --modifier(integer, --grid-span-*, --grid-area-start-*) / --value(integer, --grid-span-*, --grid-area-start-*)
+      / --modifier(integer, --grid-span-*, --grid-area-end-*) / --value(integer, --grid-span-*, --grid-area-end-*);
+}
+
+@theme {
+  --grid-track-1fr: 1fr;
+  --grid-track-2fr: 2fr;
+  --grid-track-3fr: 3fr;
+  --grid-track-max: max-content;
+  --grid-track-min: min-content;
+  --grid-track-full: 100%;
+}
+
+@utility c1-* {
+  --tw-grid-col1: --soacing(--value(number));
+  --tw-grid-col1: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-col1: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-col1: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-col1: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-col1: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-columns: var(--tw-grid-col1);
+}
+
+@utility c1-fit-* {
+  --tw-grid-col1: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-columns: var(--tw-grid-col1);
+}
+
+@utility c2-* {
+  --tw-grid-col2: --soacing(--value(number));
+  --tw-grid-col2: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-col2: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-col2: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-col2: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-col2: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-columns: var(--tw-grid-col1) var(--tw-grid-col2);
+}
+
+@utility c2-fit-* {
+  --tw-grid-col2: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-columns: var(--tw-grid-col1) var(--tw-grid-col2);
+}
+
+@utility c3-* {
+  --tw-grid-col3: --soacing(--value(number));
+  --tw-grid-col3: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-col3: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-col3: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-col3: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-col3: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-columns: var(--tw-grid-col1) var(--tw-grid-col2) var(--tw-grid-col3);
+}
+
+@utility c3-fit-* {
+  --tw-grid-col3: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-columns: var(--tw-grid-col1) var(--tw-grid-col2) var(--tw-grid-col3);
+}
+
+@utility c4-* {
+  --tw-grid-col4: --soacing(--value(number));
+  --tw-grid-col4: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-col4: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-col4: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-col4: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-col4: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-columns: var(--tw-grid-col1) var(--tw-grid-col2) var(--tw-grid-col3) var(--tw-grid-col4);
+}
+
+@utility c4-fit-* {
+  --tw-grid-col4: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-columns: var(--tw-grid-col1) var(--tw-grid-col2) var(--tw-grid-col3) var(--tw-grid-col4);
+}
+
+@utility c5-* {
+  --tw-grid-col5: --soacing(--value(number));
+  --tw-grid-col5: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-col5: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-col5: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-col5: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-col5: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-columns: var(--tw-grid-col1) var(--tw-grid-col2) var(--tw-grid-col3) var(--tw-grid-col4) var(--tw-grid-col5);
+}
+
+@utility c5-fit-* {
+  --tw-grid-col5: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-columns: var(--tw-grid-col1) var(--tw-grid-col2) var(--tw-grid-col3) var(--tw-grid-col4) var(--tw-grid-col5);
+}
+
+@utility r1-* {
+  --tw-grid-row1: --soacing(--value(number));
+  --tw-grid-row1: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-row1: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-row1: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-row1: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-row1: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-rows: var(--tw-grid-row1);
+}
+
+@utility r1-fit-* {
+  --tw-grid-row1: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-rows: var(--tw-grid-row1);
+}
+
+@utility r2-* {
+  --tw-grid-row2: --soacing(--value(number));
+  --tw-grid-row2: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-row2: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-row2: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-row2: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-row2: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-rows: var(--tw-grid-row1) var(--tw-grid-row2);
+}
+
+@utility r2-fit-* {
+  --tw-grid-row2: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-rows: var(--tw-grid-row1) var(--tw-grid-row2);
+}
+
+@utility r3-* {
+  --tw-grid-row3: --soacing(--value(number));
+  --tw-grid-row3: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-row3: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-row3: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-row3: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-row3: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-rows: var(--tw-grid-row1) var(--tw-grid-row2) var(--tw-grid-row3);
+}
+
+@utility r3-fit-* {
+  --tw-grid-row3: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-rows: var(--tw-grid-row1) var(--tw-grid-row2) var(--tw-grid-row3);
+}
+
+@utility r4-* {
+  --tw-grid-row4: --soacing(--value(number));
+  --tw-grid-row4: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-row4: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-row4: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-row4: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-row4: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-rows: var(--tw-grid-row1) var(--tw-grid-row2) var(--tw-grid-row3) var(--tw-grid-row4);
+}
+
+@utility r4-fit-* {
+  --tw-grid-row4: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-rows: var(--tw-grid-row1) var(--tw-grid-row2) var(--tw-grid-row3) var(--tw-grid-row4);
+}
+
+@utility r5-* {
+  --tw-grid-row5: --soacing(--value(number));
+  --tw-grid-row5: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  --tw-grid-row5: minmax(--spacing(--value(number)), --spacing(--modifier(number)));
+  --tw-grid-row5: minmax(--spacing(--value(number)), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  --tw-grid-row5: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --spacing(--modifier(number)));
+  --tw-grid-row5: minmax(--value('auto', --container-*, --grid-track-*, percentage, [*]), --modifier('auto', --container-*, --grid-track-*, percentage, [*]));
+  grid-template-rows: var(--tw-grid-row1) var(--tw-grid-row2) var(--tw-grid-row3) var(--tw-grid-row4) var(--tw-grid-row5);
+}
+
+@utility r5-fit-* {
+  --tw-grid-row5: --value('auto', --container-*, --grid-track-*, percentage, [*]);
+  grid-template-rows: var(--tw-grid-row1) var(--tw-grid-row2) var(--tw-grid-row3) var(--tw-grid-row4) var(--tw-grid-row5);
+}

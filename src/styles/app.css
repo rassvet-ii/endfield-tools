@@ -1,28 +1,69 @@
+/* @import url('https://fonts.cdnfonts.com/css/bender'); */
+@import url('https://fonts.cdnfonts.com/css/novecento-sans-wide');
+@import url('https://fonts.cdnfonts.com/css/harmonyos-sans');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=WDXL+Lubrifont+JP+N&display=swap');
+
 @import 'tailwindcss' source('../');
+@import './utilities.css';
+@import './grid-utilities.css';
+@plugin '@toolwind/anchors';
 
 @source '../**/*.{js,jsx,ts,tsx}';
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+:root {
+  interpolate-size: allow-keywords;
+}
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+*, ::before, ::after, ::details-content {
+  transition-behavior: allow-discrete;
+}
+
+@theme {
+  --font-sans: Noto Sans JP, sans-serif;
+  --font-inter: Inter, sans-serif;
+  --font-novecento-sans: Novecento Sans Wide, sans-serif;
+  --font-harmonyos-sans: HarmonyOS Sans, sans-serif;
+  --color-endfield: #fffa00;
+  --color-rarity-3: #26bbfa;
+  --color-rarity-4: #9550fa;
+  --color-rarity-5: #ffba02;
+  --color-rarity-6: #fd7000;
+  --image-stripe: linear-gradient(-45deg,
+    transparent 0, transparent 12.5%,
+    white 0, white 37.5%,
+    transparent 0, transparent 62.5%,
+    white 0, white 87.5%,
+    transparent 0, transparent);
+  --background-image-stripe: var(--image-stripe);
+  --mask-image-stripe: var(--image-stripe);
+}
+
+@utility stripe-* {
+  --stripe-color: --value(--color-*, [*]);
+  --stripe-color: --alpha(--value(--color-*, [*]) / calc(1% * --modifier(number)));
+
+  --stripe-width: --value(number, [number]);
+  --image-stripe: linear-gradient(-45deg,
+    transparent 0, transparent calc(25% - 0.25% * var(--stripe-width, 50)),
+    var(--stripe-color) 0, var(--stripe-color) calc(25% + 0.25% * var(--stripe-width, 50)),
+    transparent 0, transparent calc(75% - 0.25% * var(--stripe-width, 50)),
+    var(--stripe-color) 0, var(--stripe-color) calc(75% + 0.25% * var(--stripe-width, 50)),
+    transparent 0, transparent);
+  --background-image-stripe: var(--image-stripe);
+}
+
+@theme {
+  --font-sarkaz: Arknights Sarkaz;
+}
+
+/* https://github.com/lhclbt/Endfield_Font */
+@font-face {
+  font-family: 'Arknights Sarkaz';
+  src: url('https://raw.githubusercontent.com/lhclbt/Endfield_Font/main/EndfieldByButan.ttf');
 }
 
 @layer base {
-  html,
-  body {
+  :root {
     @apply text-gray-900 bg-gray-50 dark:bg-gray-950 dark:text-gray-200;
   }
 

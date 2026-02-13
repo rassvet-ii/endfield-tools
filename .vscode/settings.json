@@ -1,11 +1,14 @@
 {
-    "editor.tabSize": 2,
-    "files.associations": {
-        "*.css": "tailwindcss"
-    },
-    "[typescriptreact]": {
-        "editor.wordWrapColumn": 120,
-        "editor.wordWrap": "bounded",
-        "editor.wrappingIndent": "deepIndent",
-    }
+  "editor.tabSize": 2,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "[typescriptreact]": {
+    "editor.wordWrapColumn": 120,
+    "editor.wordWrap": "bounded",
+    "editor.wrappingIndent": "deepIndent",
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
 }

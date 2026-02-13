@@ -1,0 +1,20 @@
+[attribute]
+agi = 'agility-boost'
+str = 'strength-boost'
+will = 'will-boost'
+wisd = 'intellect-boost'
+main = 'main-attribute-boost'
+
+[secondary]
+atk = 'attack-boost'
+hp = 'hp-boost'
+phydam = 'physical-dmg-boost'
+firedam = 'heat-dmg-boost'
+electrondam = 'electric-dmg-boost'
+crystdam = 'cryo-dmg-boost'
+'' = 'nature-dmg-boost'
+crirate = 'critical-rate-boost'
+phy_spell = 'arts-intensity-boost'
+usgs = 'ultimate-gain-boost'
+magicdam = 'arts-dmg-boost'
+heal = 'treatment-efficiency-boost'

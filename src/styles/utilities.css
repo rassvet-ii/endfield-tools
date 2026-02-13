@@ -1,0 +1,123 @@
+
+@utility grid-cols-fill-* {
+  grid-template-columns: repeat(auto-fill, minmax(min(--value([*]), 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(--value(--text-*), 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(--spacing(--value(number)), 100%), 1fr));
+}
+
+@utility grid-cols-fit-* {
+  grid-template-columns: repeat(auto-fit, minmax(min(--value([*]), 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(--value(--text-*), 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(--spacing(--value(number)), 100%), 1fr));
+}
+
+@utility content-visibility-* {
+  content-visibility: --value('auto', 'hidden', 'visible');
+}
+
+@utility intrinsic-size-* {
+  contain-intrinsic-size: --value('none', --container-*, [*]);
+  contain-intrinsic-size: --spacing(--value(number));
+  contain-intrinsic-size: --value('none', --container-*, [*]) --modifier('none', --container-*, [*]);
+  contain-intrinsic-size: --value('none', --container-*, [*]) --spacing(--modifier(number));
+  contain-intrinsic-size: --spacing(--value(number)) --modifier('none', --container-*, [*]);
+  contain-intrinsic-size: --spacing(--value(number)) --spacing(--modifier(number));
+}
+
+@utility intrinsic-size-auto-* {
+  contain-intrinsic-size: auto --value('none', --container-*, [*]);
+  contain-intrinsic-size: auto --spacing(--value(number));
+  contain-intrinsic-size: auto --value('none', --container-*, [*]) auto --modifier('none', --container-*, [*]);
+  contain-intrinsic-size: auto --value('none', --container-*, [*]) auto --spacing(--modifier(number));
+  contain-intrinsic-size: auto --spacing(--value(number)) auto --modifier('none', --container-*, [*]);
+  contain-intrinsic-size: auto --spacing(--value(number)) auto --spacing(--modifier(number));
+}
+
+@utility intrinsic-size-x-* {
+  contain-intrinsic-width: --value('none', --container-*, [*]);
+  contain-intrinsic-width: --spacing(--value(number));
+}
+
+@utility intrinsic-size-x-auto-* {
+  contain-intrinsic-width: auto --value('none', --container-*, [*]);
+  contain-intrinsic-width: auto --spacing(--value(number));
+}
+
+@utility intrinsic-size-y-* {
+  contain-intrinsic-height: --value('none', --container-*, [*]);
+  contain-intrinsic-height: --spacing(--value(number));
+}
+
+@utility intrinsic-size-y-auto-* {
+  contain-intrinsic-height: auto --value('none', --container-*, [*]);
+  contain-intrinsic-height: auto --spacing(--value(number));
+}
+
+@theme {
+  --transition-property-extra:
+    color, background-color, border-color, outline-color,
+    text-decoration-color, fill, stroke,
+    --tw-gradient-from, --tw-gradient-via, --tw-gradient-to,
+    opacity, box-shadow, transform, translate, scale, rotate,
+    filter, -webkit-backdrop-filter, backdrop-filter,
+    display, content-visibility, overlay, pointer-events,
+    width, height;
+}
+
+@utility clip-path-* {
+  clip-path: --value(--clip-path-*);
+}
+
+@theme {
+  --clip-path-triangle-up: polygon(50% 0%, 0% 100%,100% 100%);
+}
+
+@utility content {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+@utility place-items-* {
+  place-items: --modifier('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*])
+    --value('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*]);
+}
+
+@utility place-content-* {
+  place-content: --modifier('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*])
+    --value('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*]);
+}
+
+
+@utility place-self-* {
+  place-self: --modifier('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*])
+    --value('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*]);
+}
+
+@utility writing-* {
+  writing-mode: --value('horizontal-tb', 'vertical-rl', 'vertical-lr', 'sideways-rl', 'sideways-lr', [*]);
+  text-orientation: --modifier('mixed', 'upright', 'sideways', [*]);
+}
+
+@utility text-orientation-* {
+  text-orientation: --value('mixed', 'upright', 'sideways', [*]);
+}
+
+@utility mask-* {
+  mask-image: --value(--mask-image-*);
+}
+
+@theme {
+  --pixel-1px: 1px;
+  --pixel-2px: 2px;
+  --pixel-4px: 4px;
+  --pixel-8px: 8px;
+}
+
+@utility bg-size-* {
+  background-size: --sizing(--value(integer));
+  background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*);
+  background-size: --sizing(--value(integer)) --sizing(--modifier(integer));
+  background-size: --sizing(--value(integer)) --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
+  background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*) --sizing(--modifier(integer));
+  background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*) --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
+}

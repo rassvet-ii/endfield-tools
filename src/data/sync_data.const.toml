@@ -1,0 +1,682 @@
+[[weapons]]
+id = "industry-01"
+rarity = 4
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "attack-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "exemplar"
+rarity = 6
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "attack-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "former-finery"
+rarity = 6
+type = "greatsword"
+attribute = "will-boost"
+secondary = "hp-boost"
+skill = "efficacy"
+
+[[weapons]]
+id = "thunderberge"
+rarity = 6
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "hp-boost"
+skill = "medicant"
+
+[[weapons]]
+id = "sundered-prince"
+rarity = 6
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "attack-boost"
+skill = "crusher"
+
+[[weapons]]
+id = "quencher"
+rarity = 4
+type = "greatsword"
+attribute = "will-boost"
+secondary = "hp-boost"
+skill = "crusher"
+
+[[weapons]]
+id = "darhoff-7"
+rarity = 3
+type = "greatsword"
+attribute = "main-attribute-boost"
+skill = "assault"
+
+[[weapons]]
+id = "seeker-of-dark-lung"
+rarity = 5
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "ultimate-gain-boost"
+skill = "detonate"
+
+[[weapons]]
+id = "finishing-call"
+rarity = 5
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "hp-boost"
+skill = "medicant"
+
+[[weapons]]
+id = "khravengger"
+rarity = 6
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "cryo-dmg-boost"
+skill = "detonate"
+
+[[weapons]]
+id = "ancient-canal"
+rarity = 5
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "arts-intensity-boost"
+skill = "brutality"
+
+[[weapons]]
+id = "obj-heavy-burden"
+rarity = 5
+type = "greatsword"
+attribute = "strength-boost"
+secondary = "hp-boost"
+skill = "efficacy"
+
+[[weapons]]
+id = "hypernova-auto"
+rarity = 4
+type = "arts-unit"
+attribute = "intellect-boost"
+secondary = "arts-dmg-boost"
+skill = "inspiring"
+
+[[weapons]]
+id = "jiminy-12"
+rarity = 3
+type = "arts-unit"
+attribute = "main-attribute-boost"
+skill = "assault"
+
+[[weapons]]
+id = "fluorescent-roc"
+rarity = 4
+type = "arts-unit"
+attribute = "will-boost"
+secondary = "attack-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "wild-wanderer"
+rarity = 5
+type = "arts-unit"
+attribute = "intellect-boost"
+secondary = "electric-dmg-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "stanza-of-memorials"
+rarity = 5
+type = "arts-unit"
+attribute = "intellect-boost"
+secondary = "attack-boost"
+skill = "twilight"
+
+[[weapons]]
+id = "opus-etch-figure"
+rarity = 6
+type = "arts-unit"
+attribute = "main-attribute-boost"
+secondary = "attack-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "monaihe"
+rarity = 5
+type = "arts-unit"
+attribute = "will-boost"
+secondary = "ultimate-gain-boost"
+skill = "inspiring"
+
+[[weapons]]
+id = "detonation-unit"
+rarity = 6
+type = "arts-unit"
+attribute = "intellect-boost"
+secondary = "arts-intensity-boost"
+skill = "detonate"
+
+[[weapons]]
+id = "oblivion"
+rarity = 6
+type = "arts-unit"
+attribute = "intellect-boost"
+secondary = "attack-boost"
+skill = "twilight"
+
+[[weapons]]
+id = "chivalric-virtues"
+rarity = 6
+type = "arts-unit"
+attribute = "will-boost"
+secondary = "hp-boost"
+skill = "medicant"
+
+[[weapons]]
+id = "delivery-guaranteed"
+rarity = 6
+type = "arts-unit"
+attribute = "will-boost"
+secondary = "ultimate-gain-boost"
+skill = "pursuit"
+
+[[weapons]]
+id = "freedom-to-proselytize"
+rarity = 5
+type = "arts-unit"
+attribute = "will-boost"
+secondary = "treatment-efficiency-boost"
+skill = "medicant"
+
+[[weapons]]
+id = "dreams-of-the-starry-beach"
+rarity = 6
+type = "arts-unit"
+attribute = "intellect-boost"
+secondary = "treatment-efficiency-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "obj-arts-identifier"
+rarity = 5
+type = "arts-unit"
+attribute = "intellect-boost"
+secondary = "arts-intensity-boost"
+skill = "pursuit"
+
+[[weapons]]
+id = "pathfinders-beacon"
+rarity = 4
+type = "polearm"
+attribute = "agility-boost"
+secondary = "attack-boost"
+skill = "inspiring"
+
+[[weapons]]
+id = "chimeric-justice"
+rarity = 5
+type = "polearm"
+attribute = "strength-boost"
+secondary = "ultimate-gain-boost"
+skill = "brutality"
+
+[[weapons]]
+id = "cohesive-traction"
+rarity = 5
+type = "polearm"
+attribute = "will-boost"
+secondary = "electric-dmg-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "aggeloslayer"
+rarity = 4
+type = "polearm"
+attribute = "will-boost"
+secondary = "arts-dmg-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "opero-77"
+rarity = 3
+type = "polearm"
+attribute = "main-attribute-boost"
+skill = "assault"
+
+[[weapons]]
+id = "valiant"
+rarity = 6
+type = "polearm"
+attribute = "agility-boost"
+secondary = "physical-dmg-boost"
+skill = "combative"
+
+[[weapons]]
+id = "jet"
+rarity = 6
+type = "polearm"
+attribute = "will-boost"
+secondary = "attack-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "mountain-bearer"
+rarity = 6
+type = "polearm"
+attribute = "agility-boost"
+secondary = "physical-dmg-boost"
+skill = "efficacy"
+
+[[weapons]]
+id = "obj-razorhorn"
+rarity = 5
+type = "polearm"
+attribute = "will-boost"
+secondary = "physical-dmg-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "peco-5"
+rarity = 3
+type = "handcannon"
+attribute = "main-attribute-boost"
+skill = "assault"
+
+[[weapons]]
+id = "howling-guard"
+rarity = 4
+type = "handcannon"
+attribute = "intellect-boost"
+secondary = "attack-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "long-road"
+rarity = 4
+type = "handcannon"
+attribute = "strength-boost"
+secondary = "arts-dmg-boost"
+skill = "pursuit"
+
+[[weapons]]
+id = "rational-farewell"
+rarity = 5
+type = "handcannon"
+attribute = "strength-boost"
+secondary = "heat-dmg-boost"
+skill = "pursuit"
+
+[[weapons]]
+id = "navigator"
+rarity = 6
+type = "handcannon"
+attribute = "main-attribute-boost"
+secondary = "ultimate-gain-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "opus-the-living"
+rarity = 5
+type = "handcannon"
+attribute = "agility-boost"
+secondary = "arts-dmg-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "wedge"
+rarity = 6
+type = "handcannon"
+attribute = "intellect-boost"
+secondary = "attack-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "clannibal"
+rarity = 6
+type = "handcannon"
+attribute = "strength-boost"
+secondary = "attack-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "artzy-tyrannical"
+rarity = 6
+type = "handcannon"
+attribute = "intellect-boost"
+secondary = "critical-rate-boost"
+skill = "fracture"
+
+[[weapons]]
+id = "obj-velocitous"
+rarity = 5
+type = "handcannon"
+attribute = "agility-boost"
+secondary = "ultimate-gain-boost"
+skill = "detonate"
+
+[[weapons]]
+id = "tarr-11"
+rarity = 3
+type = "sword"
+attribute = "main-attribute-boost"
+skill = "assault"
+
+[[weapons]]
+id = "sundering-steel"
+rarity = 5
+type = "sword"
+attribute = "agility-boost"
+secondary = "physical-dmg-boost"
+skill = "combative"
+
+[[weapons]]
+id = "forgeborn-scathe"
+rarity = 6
+type = "sword"
+attribute = "intellect-boost"
+secondary = "attack-boost"
+skill = "twilight"
+
+[[weapons]]
+id = "fortmaker"
+rarity = 5
+type = "sword"
+attribute = "intellect-boost"
+secondary = "arts-dmg-boost"
+skill = "inspiring"
+
+[[weapons]]
+id = "contingent-measure"
+rarity = 4
+type = "sword"
+attribute = "agility-boost"
+secondary = "physical-dmg-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "wave-tide"
+rarity = 4
+type = "sword"
+attribute = "intellect-boost"
+secondary = "attack-boost"
+skill = "pursuit"
+
+[[weapons]]
+id = "umbral-torch"
+rarity = 6
+type = "sword"
+attribute = "main-attribute-boost"
+secondary = "heat-dmg-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "rapid-ascent"
+rarity = 6
+type = "sword"
+attribute = "agility-boost"
+secondary = "critical-rate-boost"
+skill = "twilight"
+
+[[weapons]]
+id = "thermite-cutter"
+rarity = 6
+type = "sword"
+attribute = "will-boost"
+secondary = "attack-boost"
+skill = "flow"
+
+[[weapons]]
+id = "eminent-repute"
+rarity = 6
+type = "sword"
+attribute = "agility-boost"
+secondary = "physical-dmg-boost"
+skill = "brutality"
+
+[[weapons]]
+id = "white-night-nova"
+rarity = 6
+type = "sword"
+attribute = "intellect-boost"
+secondary = "arts-intensity-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "aspirant"
+rarity = 5
+type = "sword"
+attribute = "agility-boost"
+secondary = "physical-dmg-boost"
+skill = "twilight"
+
+[[weapons]]
+id = "never-rest"
+rarity = 6
+type = "sword"
+attribute = "will-boost"
+secondary = "attack-boost"
+skill = "flow"
+
+[[weapons]]
+id = "twelve-questions"
+rarity = 5
+type = "sword"
+attribute = "agility-boost"
+secondary = "attack-boost"
+skill = "infliction"
+
+[[weapons]]
+id = "obj-edge-of-lightness"
+rarity = 5
+type = "sword"
+attribute = "agility-boost"
+secondary = "attack-boost"
+skill = "flow"
+
+[[weapons]]
+id = "finchaser-30"
+rarity = 5
+type = "sword"
+attribute = "strength-boost"
+secondary = "ultimate-gain-boost"
+skill = "suppression"
+
+[[weapons]]
+id = "grand-vision"
+rarity = 6
+type = "sword"
+attribute = "agility-boost"
+secondary = "attack-boost"
+skill = "infliction"
+
+[[operators]]
+id = "the-endministrator"
+rarity = 6
+type = "Sword"
+profession = "guard"
+element = "physical"
+faction = "endfield-industries"
+
+[[operators]]
+id = "the-endministrator-2"
+rarity = 6
+type = "Sword"
+profession = "guard"
+element = "physical"
+faction = "endfield-industries"
+
+[[operators]]
+id = "perlica"
+rarity = 5
+type = "Arts Unit"
+profession = "caster"
+element = "pulse"
+faction = "endfield-industries"
+
+[[operators]]
+id = "chen-qianyu"
+rarity = 5
+type = "Sword"
+profession = "guard"
+element = "physical"
+faction = "endfield-industries"
+
+[[operators]]
+id = "wulfgard"
+rarity = 5
+type = "Handcannon"
+profession = "caster"
+element = "fire"
+faction = "endfield-industries"
+
+[[operators]]
+id = "arclight"
+rarity = 5
+type = "Sword"
+profession = "vanguard"
+element = "pulse"
+faction = "hannabit-circuit"
+
+[[operators]]
+id = "ember"
+rarity = 6
+type = "Greatsword"
+profession = "defender"
+element = "fire"
+faction = "order-of-steel-oath"
+
+[[operators]]
+id = "xaihi"
+rarity = 5
+type = "Arts Unit"
+profession = "support"
+element = "cryst"
+faction = "cabal-of-tranquility"
+
+[[operators]]
+id = "avywenna"
+rarity = 5
+type = "Polearm"
+profession = "striker"
+element = "pulse"
+faction = "tgcc"
+
+[[operators]]
+id = "gilberta"
+rarity = 6
+type = "Arts Unit"
+profession = "support"
+element = "natural"
+faction = "rhodes-island"
+
+[[operators]]
+id = "snowshine"
+rarity = 5
+type = "Greatsword"
+profession = "defender"
+element = "cryst"
+faction = "rhodes-island"
+
+[[operators]]
+id = "lifeng"
+rarity = 6
+type = "Polearm"
+profession = "guard"
+element = "physical"
+faction = "hongshan"
+
+[[operators]]
+id = "laevatain"
+rarity = 6
+type = "Sword"
+profession = "striker"
+element = "fire"
+faction = "rhodes-island"
+
+[[operators]]
+id = "yvonne"
+rarity = 6
+type = "Handcannon"
+profession = "caster"
+element = "cryst"
+faction = "endfield-industries"
+
+[[operators]]
+id = "da-pan"
+rarity = 5
+type = "Greatsword"
+profession = "striker"
+element = "physical"
+faction = "hongshan"
+
+[[operators]]
+id = "akekuri"
+rarity = 4
+type = "Sword"
+profession = "vanguard"
+element = "fire"
+faction = "endfield-industries"
+
+[[operators]]
+id = "catcher"
+rarity = 4
+type = "Greatsword"
+profession = "defender"
+element = "physical"
+faction = "endfield-industries"
+
+[[operators]]
+id = "estella"
+rarity = 4
+type = "Polearm"
+profession = "guard"
+element = "cryst"
+faction = "endfield-industries"
+
+[[operators]]
+id = "fluorite"
+rarity = 4
+type = "Handcannon"
+profession = "caster"
+element = "natural"
+faction = "endfield-industries"
+
+[[operators]]
+id = "antal"
+rarity = 4
+type = "Arts Unit"
+profession = "support"
+element = "pulse"
+faction = "endfield-industries"
+
+[[operators]]
+id = "alesh"
+rarity = 5
+type = "Sword"
+profession = "vanguard"
+element = "cryst"
+faction = ""
+
+[[operators]]
+id = "ardelia"
+rarity = 6
+type = "Arts Unit"
+profession = "support"
+element = "natural"
+faction = "rhodes-island"
+
+[[operators]]
+id = "last-rite"
+rarity = 6
+type = "Greatsword"
+profession = "striker"
+element = "cryst"
+faction = ""
+
+[[operators]]
+id = "pogranichnik"
+rarity = 5
+type = "Sword"
+profession = "vanguard"
+element = "physical"
+faction = "rhodes-island"

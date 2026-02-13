@@ -1,0 +1,180 @@
+[[stats.attribute]]
+id = 'agility-boost'
+
+[[stats.attribute]]
+id = 'strength-boost'
+
+[[stats.attribute]]
+id = 'will-boost'
+
+[[stats.attribute]]
+id = 'intellect-boost'
+
+[[stats.attribute]]
+id = 'main-attribute-boost'
+
+
+
+[[stats.secondary]]
+id = 'attack-boost'
+
+[[stats.secondary]]
+id = 'hp-boost'
+
+[[stats.secondary]]
+id = 'physical-dmg-boost'
+
+[[stats.secondary]]
+id = 'heat-dmg-boost'
+
+[[stats.secondary]]
+id = 'electric-dmg-boost'
+
+[[stats.secondary]]
+id = 'cryo-dmg-boost'
+
+[[stats.secondary]]
+id = 'nature-dmg-boost'
+
+[[stats.secondary]]
+id = 'critical-rate-boost'
+
+[[stats.secondary]]
+id = 'arts-intensity-boost'
+
+[[stats.secondary]]
+id = 'ultimate-gain-boost'
+
+[[stats.secondary]]
+id = 'arts-dmg-boost'
+
+[[stats.secondary]]
+id = 'treatment-efficiency-boost'
+
+
+
+[[stats.skill]]
+id = 'assault'
+
+[[stats.skill]]
+id = 'suppression'
+
+[[stats.skill]]
+id = 'pursuit'
+
+[[stats.skill]]
+id = 'crusher'
+
+[[stats.skill]]
+id = 'inspiring'
+
+[[stats.skill]]
+id = 'combative'
+
+[[stats.skill]]
+id = 'brutality'
+
+[[stats.skill]]
+id = 'infliction'
+
+[[stats.skill]]
+id = 'medicant'
+
+[[stats.skill]]
+id = 'fracture'
+
+[[stats.skill]]
+id = 'detonate'
+
+[[stats.skill]]
+id = 'twilight'
+
+[[stats.skill]]
+id = 'flow'
+
+[[stats.skill]]
+id = 'efficacy'
+
+
+
+[[energy_alluviums]]
+id = 'the-hub'
+attribute_stats = ['agility-boost', 'strength-boost', 'will-boost', 'intellect-boost', 'main-attribute-boost']
+secondary_stats = ['attack-boost', 'heat-dmg-boost', 'electric-dmg-boost', 'cryo-dmg-boost', 'nature-dmg-boost', 'arts-intensity-boost', 'ultimate-gain-boost', 'arts-dmg-boost']
+skill_stats = ['assault', 'suppression', 'pursuit', 'crusher', 'combative', 'detonate', 'flow', 'efficacy']
+
+[[energy_alluviums]]
+id = 'originium-science-park'
+attribute_stats = ['agility-boost', 'strength-boost', 'will-boost', 'intellect-boost', 'main-attribute-boost']
+secondary_stats = ['attack-boost', 'physical-dmg-boost', 'electric-dmg-boost', 'cryo-dmg-boost', 'nature-dmg-boost', 'critical-rate-boost', 'ultimate-gain-boost', 'arts-dmg-boost']
+skill_stats = ['suppression', 'pursuit', 'inspiring', 'combative', 'infliction', 'medicant', 'fracture', 'efficacy']
+
+[[energy_alluviums]]
+id = 'origin-lodespring'
+attribute_stats = ['agility-boost', 'strength-boost', 'will-boost', 'intellect-boost', 'main-attribute-boost']
+secondary_stats = ['hp-boost', 'physical-dmg-boost', 'heat-dmg-boost', 'cryo-dmg-boost', 'nature-dmg-boost', 'critical-rate-boost', 'arts-intensity-boost', 'treatment-efficiency-boost']
+skill_stats = ['assault', 'suppression', 'combative', 'brutality', 'infliction', 'detonate', 'twilight', 'efficacy']
+
+[[energy_alluviums]]
+id = 'power-plateu'
+attribute_stats = ['agility-boost', 'strength-boost', 'will-boost', 'intellect-boost', 'main-attribute-boost']
+secondary_stats = ['attack-boost', 'hp-boost', 'physical-dmg-boost', 'heat-dmg-boost', 'nature-dmg-boost', 'critical-rate-boost', 'arts-intensity-boost', 'treatment-efficiency-boost']
+skill_stats = ['pursuit', 'crusher', 'inspiring', 'brutality', 'infliction', 'medicant', 'fracture', 'flow']
+
+[[energy_alluviums]]
+id = 'wuiling-city'
+attribute_stats = ['agility-boost', 'strength-boost', 'will-boost', 'intellect-boost', 'main-attribute-boost']
+secondary_stats = ['attack-boost', 'hp-boost', 'electric-dmg-boost', 'cryo-dmg-boost', 'critical-rate-boost', 'ultimate-gain-boost', 'arts-dmg-boost', 'treatment-efficiency-boost']
+skill_stats = ['assault', 'crusher', 'brutality', 'medicant', 'detonate', 'fracture', 'twilight', 'flow']
+
+
+
+[[elements]]
+id = 'heat'
+icon = 'icons/heat.webp'
+
+[[operator_classes]]
+id = 'guard'
+icon = 'icons/guard.webp'
+
+[[operator_classes]]
+id = 'caster'
+icon = 'icons/caster.webp'
+
+[[operator_classes]]
+id = 'striker'
+icon = 'icons/striker.webp'
+
+[[operator_classes]]
+id = 'vanguard'
+icon = 'icons/vanguard.webp'
+
+[[operator_classes]]
+id = 'defender'
+icon = 'icons/defender.webp'
+
+[[operator_classes]]
+id = 'supporter'
+icon = 'icons/supporter.webp'
+
+
+
+[[weapon_types]]
+id = 'sword'
+icon = 'icons/sword.webp'
+
+[[weapon_types]]
+id = 'arts-unit'
+icon = 'icons/arts-unit.webp'
+
+[[weapon_types]]
+id = 'greatsword'
+icon = 'icons/greatsword.webp'
+
+[[weapon_types]]
+id = 'polearm'
+icon = 'icons/polearm.webp'
+
+[[weapon_types]]
+id = 'handcannon'
+icon = 'icons/handcannon.webp'

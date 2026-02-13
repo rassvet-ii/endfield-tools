@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import tsConfigPaths from 'vite-tsconfig-paths'
 import viteReact from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { ViteToml } from 'vite-plugin-toml'
 
 export default defineConfig({
   plugins: [
@@ -26,5 +27,6 @@ export default defineConfig({
       },
     }),
     viteReact(),
+    ViteToml(),
   ],
 })
