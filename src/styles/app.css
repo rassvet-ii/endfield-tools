@@ -1,7 +1,6 @@
-/* @import url('https://fonts.cdnfonts.com/css/bender'); */
 @import url('https://fonts.cdnfonts.com/css/novecento-sans-wide');
-@import url('https://fonts.cdnfonts.com/css/harmonyos-sans');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=WDXL+Lubrifont+JP+N&display=swap');
+/* @import url('https://fonts.cdnfonts.com/css/harmonyos-sans'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=WDXL+Lubrifont+JP+N&display=swap'); */
 
 @import 'tailwindcss' source('../');
 @import './utilities.css';
@@ -12,6 +11,7 @@
 
 :root {
   interpolate-size: allow-keywords;
+  @apply transition opacity-100!;
 }
 
 *, ::before, ::after, ::details-content {
@@ -20,7 +20,6 @@
 
 @theme {
   --font-sans: Noto Sans JP, sans-serif;
-  --font-inter: Inter, sans-serif;
   --font-novecento-sans: Novecento Sans Wide, sans-serif;
   --font-harmonyos-sans: HarmonyOS Sans, sans-serif;
   --color-endfield: #fffa00;
@@ -36,6 +35,7 @@
     transparent 0, transparent);
   --background-image-stripe: var(--image-stripe);
   --mask-image-stripe: var(--image-stripe);
+  --tracking-tightest: -0.1em;
 }
 
 @utility stripe-* {
@@ -69,5 +69,11 @@
 
   .using-mouse * {
     outline: none !important;
+  }
+}
+
+@layer components {
+  .comment-chip {
+    @apply font-novecento-sans font-black before:content-["//"] before:tracking-[-0.2em] before:me-[0.25em];
   }
 }

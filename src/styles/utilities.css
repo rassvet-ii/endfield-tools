@@ -54,14 +54,7 @@
 }
 
 @theme {
-  --transition-property-extra:
-    color, background-color, border-color, outline-color,
-    text-decoration-color, fill, stroke,
-    --tw-gradient-from, --tw-gradient-via, --tw-gradient-to,
-    opacity, box-shadow, transform, translate, scale, rotate,
-    filter, -webkit-backdrop-filter, backdrop-filter,
-    display, content-visibility, overlay, pointer-events,
-    width, height;
+  --transition-property-details: content-visibility, height;
 }
 
 @utility clip-path-* {
@@ -121,3 +114,5 @@
   background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*) --sizing(--modifier(integer));
   background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*) --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
 }
+
+@custom-variant details (&::details-content);
