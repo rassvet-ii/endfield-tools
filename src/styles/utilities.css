@@ -53,10 +53,6 @@
   contain-intrinsic-height: auto --spacing(--value(number));
 }
 
-@theme {
-  --transition-property-details: content-visibility, height;
-}
-
 @utility clip-path-* {
   clip-path: --value(--clip-path-*);
 }

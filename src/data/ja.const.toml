@@ -37,6 +37,13 @@ twilight = "夜幕"
 flow = "流回"
 efficacy = "効率"
 
+[energy_alluviums]
+the-hub = "中枢エリア"
+originium-science-park = "源石研究パーク"
+origin-lodespring = "鉱石エリア"
+power-plateu = "エネルギー高地"
+wuiling-city = "武陵城"
+
 [weapons]
 industry-01 = "工業零点一"
 exemplar = "鑑"

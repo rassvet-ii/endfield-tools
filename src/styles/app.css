@@ -27,15 +27,11 @@
   --color-rarity-4: #9550fa;
   --color-rarity-5: #ffba02;
   --color-rarity-6: #fd7000;
-  --image-stripe: linear-gradient(-45deg,
-    transparent 0, transparent 12.5%,
-    white 0, white 37.5%,
-    transparent 0, transparent 62.5%,
-    white 0, white 87.5%,
-    transparent 0, transparent);
+  --image-stripe: none;
   --background-image-stripe: var(--image-stripe);
   --mask-image-stripe: var(--image-stripe);
   --tracking-tightest: -0.1em;
+  --transition-property-details: content-visibility, opacity, height;
 }
 
 @utility stripe-* {
