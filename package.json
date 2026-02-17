@@ -2,11 +2,9 @@
   "private": true,
   "scripts": {
     "dev": "vike dev",
-    "build": "vike build",
+    "build": "tsc --noEmit && vike build",
     "preview": "vike build && vike preview",
-    "lint": "biome lint --write .",
-    "format": "biome format --write .",
-    "check": "biome check --write ."
+    "check": "tsc --noEmit && biome check --write ."
   },
   "dependencies": {
     "clsx": "^2.1.1",

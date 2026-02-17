@@ -1,0 +1,32 @@
+name: deployment
+on:
+  push:
+    # Only deploy upon new commits to `main`
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2.1.2
+
+      - run: bun install
+      - run: bun run build
+        env:
+          BASE_URL: /endfield-tools
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.8.0
+        with:
+          branch: gh-pages
+          folder: dist/client
+          # Remove previous build files
+          clean: true
+          # Remove history — avoiding exploding Git repository size
+          single-commit: true
+          # Do not remove the `.nojekyll` file: we have manually added an empty `.nojekyll` file at the root of the `gh-pages` branch and we don't want having to re-create it after each build.
+          clean-exclude: |
+            .nojekyll
+permissions:
+  contents: write

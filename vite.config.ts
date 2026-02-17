@@ -7,4 +7,5 @@ import paths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [vike(), react(), tailwindcss(), toml(), paths()],
+  base: process.env.BASE_URL,
 });

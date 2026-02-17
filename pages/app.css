@@ -5,7 +5,7 @@
 @import 'tailwindcss' source('../');
 @import './utilities.css';
 @import './grid-utilities.css';
-@plugin '@toolwind/anchors';
+/* @plugin '@toolwind/anchors'; */
 
 @source '../**/*.{js,jsx,ts,tsx}';
 
