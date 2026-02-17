@@ -1,6 +1,6 @@
 // https://vike.dev/data
 
-import type { PageContextServer } from "vike/types";
+import type { PageContextServer } from 'vike/types';
 
 export type Data = Awaited<ReturnType<typeof data>>;
 

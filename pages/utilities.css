@@ -1,4 +1,3 @@
-
 @utility grid-cols-fill-* {
   grid-template-columns: repeat(auto-fill, minmax(min(--value([*]), 100%), 1fr));
   grid-template-columns: repeat(auto-fill, minmax(min(--value(--text-*), 100%), 1fr));
@@ -27,9 +26,12 @@
 @utility intrinsic-size-auto-* {
   contain-intrinsic-size: auto --value('none', --container-*, [*]);
   contain-intrinsic-size: auto --spacing(--value(number));
-  contain-intrinsic-size: auto --value('none', --container-*, [*]) auto --modifier('none', --container-*, [*]);
-  contain-intrinsic-size: auto --value('none', --container-*, [*]) auto --spacing(--modifier(number));
-  contain-intrinsic-size: auto --spacing(--value(number)) auto --modifier('none', --container-*, [*]);
+  contain-intrinsic-size: auto --value('none', --container-*, [*]) auto
+    --modifier('none', --container-*, [*]);
+  contain-intrinsic-size: auto --value('none', --container-*, [*]) auto
+    --spacing(--modifier(number));
+  contain-intrinsic-size: auto --spacing(--value(number)) auto
+    --modifier('none', --container-*, [*]);
   contain-intrinsic-size: auto --spacing(--value(number)) auto --spacing(--modifier(number));
 }
 
@@ -57,32 +59,33 @@
   clip-path: --value(--clip-path-*);
 }
 
-@theme {
-  --clip-path-triangle-up: polygon(50% 0%, 0% 100%,100% 100%);
-}
-
 @utility content {
   --tw-content: '';
   content: var(--tw-content);
 }
 
+@theme {
+  --place-center-safe: safe center;
+  --place-center-safe: safe end;
+}
+
 @utility place-items-* {
-  place-items: --modifier('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*])
-    --value('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*]);
+  place-items: --modifier('auto', 'start', 'center', 'end', 'stretch', --place-*, [*])
+    --value('auto', 'start', 'center', 'end', 'stretch', --place-*, [*]);
 }
 
 @utility place-content-* {
-  place-content: --modifier('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*])
-    --value('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*]);
+  place-content: --modifier('auto', 'start', 'center', 'end', 'stretch', --place-*, [*])
+    --value('auto', 'start', 'center', 'end', 'stretch', --place-*, [*]);
 }
 
-
 @utility place-self-* {
-  place-self: --modifier('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*])
-    --value('auto', 'start', 'center', 'end', 'center-safe', 'end-safe', 'stretch', [*]);
+  place-self: --modifier('auto', 'start', 'center', 'end', 'stretch', --place-*, [*])
+    --value('auto', 'start', 'center', 'end', 'stretch', --place-*, [*]);
 }
 
 @utility writing-* {
+  /* biome-ignore format: formatting causes error */
   writing-mode: --value('horizontal-tb', 'vertical-rl', 'vertical-lr', 'sideways-rl', 'sideways-lr', [*]);
   text-orientation: --modifier('mixed', 'upright', 'sideways', [*]);
 }
@@ -106,9 +109,12 @@
   background-size: --sizing(--value(integer));
   background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*);
   background-size: --sizing(--value(integer)) --sizing(--modifier(integer));
-  background-size: --sizing(--value(integer)) --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
-  background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*) --sizing(--modifier(integer));
-  background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*) --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
+  background-size: --sizing(--value(integer))
+    --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
+  background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*)
+    --sizing(--modifier(integer));
+  background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*)
+    --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
 }
 
 @custom-variant details (&::details-content);

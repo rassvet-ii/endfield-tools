@@ -5,7 +5,8 @@
     "build": "vike build",
     "preview": "vike build && vike preview",
     "lint": "biome lint --write .",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+    "check": "biome check --write ."
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -5,10 +5,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": [
-      "vite/client",
-      "vike-react"
-    ],
+    "types": ["vite/client", "vike-react"],
     "noEmit": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,11 +14,7 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "plugins": [
-      { "name": "typescript-plugin-toml" }
-    ]
+    "plugins": [{ "name": "typescript-plugin-toml" }]
   },
-  "exclude": [
-    "dist"
-  ]
+  "exclude": ["dist"]
 }

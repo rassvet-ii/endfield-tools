@@ -14,7 +14,10 @@
   @apply transition opacity-100!;
 }
 
-*, ::before, ::after, ::details-content {
+*,
+::before,
+::after,
+::details-content {
   transition-behavior: allow-discrete;
 }
 
@@ -22,16 +25,22 @@
   --font-sans: Noto Sans JP, sans-serif;
   --font-novecento-sans: Novecento Sans Wide, sans-serif;
   --font-harmonyos-sans: HarmonyOS Sans, sans-serif;
+  --tracking-tightest: -0.1em;
+
   --color-endfield: #fffa00;
   --color-rarity-3: #26bbfa;
   --color-rarity-4: #9550fa;
   --color-rarity-5: #ffba02;
   --color-rarity-6: #fd7000;
+
   --image-stripe: none;
   --background-image-stripe: var(--image-stripe);
   --mask-image-stripe: var(--image-stripe);
-  --tracking-tightest: -0.1em;
+
   --transition-property-details: content-visibility, opacity, height;
+
+  --clip-path-triangle-up: polygon(50% 0%, 0% 100%, 100% 100%);
+  /* --clip-path-triangle-up: polygon(50% 0%, 0% 100%, 100% 100%); */
 }
 
 @utility stripe-* {
@@ -39,6 +48,7 @@
   --stripe-color: --alpha(--value(--color-*, [*]) / calc(1% * --modifier(number)));
 
   --stripe-width: --value(number, [number]);
+  /* biome-ignore format: too long */
   --image-stripe: linear-gradient(-45deg,
     transparent 0, transparent calc(25% - 0.25% * var(--stripe-width, 50)),
     var(--stripe-color) 0, var(--stripe-color) calc(25% + 0.25% * var(--stripe-width, 50)),
@@ -62,14 +72,18 @@
   :root {
     @apply text-gray-900 bg-gray-50 dark:bg-gray-950 dark:text-gray-200;
   }
-
-  .using-mouse * {
-    outline: none !important;
-  }
 }
 
 @layer components {
   .comment-chip {
     @apply font-novecento-sans font-black before:content-["//"] before:tracking-[-0.2em] before:me-[0.25em];
+  }
+
+  .chip-button {
+    @apply relative flex items-center h-4 px-2 rounded-full text-xs transition bg-gray-50 has-checked:bg-endfield shadow-sm hover:shadow-md hover:brightness-90;
+
+    & input {
+      @apply absolute appearance-none inset-0 rounded-full;
+    }
   }
 }
