@@ -1,5 +1,5 @@
 import * as TOML from "smol-toml";
-import { data } from "../src/database";
+import { data } from "../pages/data/database";
 
 const lang = {
   stats: [

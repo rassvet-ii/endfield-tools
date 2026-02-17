@@ -1,25 +1,27 @@
 {
-  "include": ["**/*.ts", "**/*.tsx"],
   "compilerOptions": {
     "strict": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "target": "esnext",
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./src/*"]
-    },
+    "types": [
+      "vite/client",
+      "vike-react"
+    ],
     "noEmit": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "paths": {
+      "@/*": ["./*"]
+    },
     "plugins": [
       { "name": "typescript-plugin-toml" }
     ]
-  }
+  },
+  "exclude": [
+    "dist"
+  ]
 }

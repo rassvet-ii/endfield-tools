@@ -1,32 +1,10 @@
-import { tanstackStart } from '@tanstack/react-start/plugin/vite'
-import { defineConfig } from 'vite'
-import tsConfigPaths from 'vite-tsconfig-paths'
-import viteReact from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { ViteToml } from 'vite-plugin-toml'
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import vike from "vike/plugin";
+import { defineConfig } from "vite";
+import { ViteToml as toml } from 'vite-plugin-toml'
+import paths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-    tsConfigPaths({
-      projects: ['./tsconfig.json'],
-    }),
-    tanstackStart({
-      spa: {
-        enabled: true,
-        prerender: {
-          crawlLinks: true,
-        },
-      },
-      sitemap: {
-        host: 'https://localhost:3000',
-      },
-      prerender: {
-        failOnError: false,
-        crawlLinks: true,
-      },
-    }),
-    viteReact(),
-    ViteToml(),
-  ],
-})
+  plugins: [vike(), react(), tailwindcss(), toml(), paths()],
+});

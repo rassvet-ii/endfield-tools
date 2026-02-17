@@ -1,5 +1,5 @@
-import sync_data from "./data/sync_data.const.toml";
-import static_data from "./data/static_data.const.toml";
+import sync_data from "./sync_data.const.toml";
+import static_data from "./static_data.const.toml";
 import { z } from "zod";
 
 const checkUnique = <T>(

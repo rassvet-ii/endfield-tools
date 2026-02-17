@@ -16,3 +16,4 @@ declare module '@tanstack/react-router' {
         title_en: string,
     }
 }
+

@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import sync_data from "../src/data/sync_data.const.toml";
-import static_data from "../src/data/static_data.const.toml";
-import { databaseIds, database } from "../src/database"
+import sync_data from "@/pages/data/sync_data.const.toml";
+import static_data from "@/pages/data/static_data.const.toml";
+import { databaseIds, database } from "@/pages/data/database"
 
 const merged_data = { ...sync_data, ...static_data };
 

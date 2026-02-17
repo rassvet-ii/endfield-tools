@@ -1,44 +1,46 @@
-# TanStack Start - Static Example
-
-This site is built with TanStack Router!
-
-- [TanStack Router Docs](https://tanstack.com/router)
-
-## Start a new project based on this example
-
-To start a new project based on this example, run:
+Generated with [vike.dev/new](https://vike.dev/new) ([version 581](https://www.npmjs.com/package/create-vike/v/0.0.581)) using this command:
 
 ```sh
-npx gitpick TanStack/router/tree/main/examples/react/start-basic-static start-basic-static
+bun create vike@latest --react --tailwindcss --biome
 ```
 
-## Deployment
+## Contents
 
-It's deployed automagically with Vercel!
+- [Vike](#vike)
+  - [Plus files](#plus-files)
+  - [Routing](#routing)
+  - [SSR](#ssr)
+  - [HTML Streaming](#html-streaming)
 
-- [Vercel](https://vercel.com/)
+## Vike
 
-## Getting Started
+This app is ready to start. It's powered by [Vike](https://vike.dev) and [React](https://react.dev/learn).
 
-From your terminal:
+### Plus files
 
-```sh
-pnpm install
-pnpm dev
-```
+[The + files are the interface](https://vike.dev/config) between Vike and your code.
 
-## Build
+- [`+config.ts`](https://vike.dev/settings) — Settings (e.g. `<title>`)
+- [`+Page.tsx`](https://vike.dev/Page) — The `<Page>` component
+- [`+data.ts`](https://vike.dev/data) — Fetching data (for your `<Page>` component)
+- [`+Layout.tsx`](https://vike.dev/Layout) — The `<Layout>` component (wraps your `<Page>` components)
+- [`+Head.tsx`](https://vike.dev/Head) - Sets `<head>` tags
+- [`/pages/_error/+Page.tsx`](https://vike.dev/error-page) — The error page (rendered when an error occurs)
+- [`+onPageTransitionStart.ts`](https://vike.dev/onPageTransitionStart) and `+onPageTransitionEnd.ts` — For page transition animations
 
-Build for production:
+### Routing
 
-```sh
-pnpm build
-```
+[Vike's built-in router](https://vike.dev/routing) lets you choose between:
 
-## About This Example
+- [Filesystem Routing](https://vike.dev/filesystem-routing) (the URL of a page is determined based on where its `+Page.jsx` file is located on the filesystem)
+- [Route Strings](https://vike.dev/route-string)
+- [Route Functions](https://vike.dev/route-function)
 
-This example demonstrates:
+### SSR
 
-- Static Site Generation (SSG) with TanStack Start
-- Prerendering routes
-- Static export
+SSR is enabled by default. You can [disable it](https://vike.dev/ssr) for all or specific pages.
+
+### HTML Streaming
+
+You can [enable/disable HTML streaming](https://vike.dev/stream) for all or specific pages.
+

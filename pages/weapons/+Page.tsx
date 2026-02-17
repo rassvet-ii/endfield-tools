@@ -1,30 +1,20 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { id, data } from '~/database'
+import { id, data } from '@/pages/data/database'
 import lang from '../data/ja.const.toml';
 import { useEffect, useReducer, useRef, useState } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import { clsx } from 'clsx';
 
-export const Route = createFileRoute('/weapons')({
-  component: RouteComponent,
-  staticData: {
-    title: '武器選択',
-    title_en: 'WEAPONS'
-  }
-})
-
-function RouteComponent() {
-  const [{ columns, height }, setSizes] = useState({ columns: 6, height: null as (number | null) });
+export default function RouteComponent() {
+  const [{ columns }, setSizes] = useState({ columns: 6  });
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const listener = () => {
       if (ref.current == null) return;
 
-      const height = ref.current.offsetHeight;
       const columns = window.getComputedStyle(ref.current)
         .getPropertyValue('grid-template-columns')
         .split(' ').length;
-      setSizes({ columns, height });
+      setSizes({ columns });
     }
 
     listener()
@@ -61,8 +51,8 @@ function RouteComponent() {
   });
 
   const filter = useWatch({ control });
-  const implies = (cond: boolean | null | undefined, value: boolean | null | undefined) => !cond || value;
-  const some = (values: Record<string, boolean | null | undefined>) => Object.values(values).some((it) => it);
+  const implies = (cond: boolean | unknown, value: boolean | unknown) => !cond || !!value;
+  const some = (values: Record<string, boolean | unknown>) => Object.values(values).some((it) => it);
   const weaponFilter = ({
     rarity = {},
     attribute = {},
@@ -100,7 +90,7 @@ function RouteComponent() {
         ([3, 4, 5, 6] as const).map((rarity) => ({
           key: `rarity.${rarity}`,
           label: Array.from({ length: rarity }, (_, i) => (
-            <img key={i} src='/star.png' alt='star' className='h-3 -translate-x-px' />
+            <img key={i} src='/endfield-res/star.png' alt='star' className='h-3 -translate-x-px' />
           )),
           count: data.weapons.filter(weaponFilter({ ...filter, rarity: { [rarity]: true }})).length,
         } as const)),
