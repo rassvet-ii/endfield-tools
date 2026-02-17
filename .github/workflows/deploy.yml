@@ -10,23 +10,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2.1.2
+      - id: configure
+        uses: actions/configure-pages@v5.0.0
 
       - run: bun install
       - run: bun run build
         env:
-          BASE_URL: /endfield-tools
+          BASE_URL: ${{ steps.configure.outputs.base_url }}
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.8.0
+      - uses: actions/upload-pages-artifact@v4.0.0
         with:
-          branch: gh-pages
-          folder: dist/client
-          # Remove previous build files
-          clean: true
-          # Remove history — avoiding exploding Git repository size
-          single-commit: true
-          # Do not remove the `.nojekyll` file: we have manually added an empty `.nojekyll` file at the root of the `gh-pages` branch and we don't want having to re-create it after each build.
-          clean-exclude: |
-            .nojekyll
+          path: dist/client
+      - uses: actions/deploy-pages@v4.0.5
 permissions:
-  contents: write
+  pages: write
+  id-token: write

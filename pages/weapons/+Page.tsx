@@ -1,8 +1,9 @@
 import { clsx } from 'clsx';
 import { Fragment, type ReactNode, useEffect, useReducer, useRef, useState } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
-import { data, id } from '@/pages/data/database';
-import lang from '../data/ja.const.toml';
+import { img } from '@/src/assets';
+import { data, id } from '@/src/data';
+import lang from '@/src/ja.const.toml';
 
 export default function RouteComponent() {
   const [{ columns }, setSizes] = useState({ columns: 6 });
@@ -94,7 +95,7 @@ export default function RouteComponent() {
         ),
       ]);
 
-  const s = <img src='/endfield-res/star.png' alt='star' className='h-3 -translate-x-px' />;
+  const s = <img src={img.star} alt='star' className='h-3 -translate-x-px' />;
   const stars = {
     // biome-ignore lint/suspicious/noArrayIndexKey: reason
     3: Array.from({ length: 3 }, (_, i) => <Fragment key={i}>{s}</Fragment>),
@@ -188,7 +189,7 @@ export default function RouteComponent() {
           className={`size-full bg-gray-900 stripe-gray-800 bg-stripe bg-size-4px/4px border-b-4 inset-shadow-[0px_-20px_20px_-20px] ${color}`}
         />
         <img
-          src={`/endfield-res/weapons/${it.id}.webp`}
+          src={img.weapons[it.id]}
           alt={lang.weapons[it.id]}
           width={256}
           height={256}
@@ -206,7 +207,7 @@ export default function RouteComponent() {
           className={`size-full bg-gray-900 stripe-gray-800 bg-stripe bg-size-4px/4px border-b-4 inset-shadow-[0px_-40px_40px_-40px] ${color}`}
         />
         <img
-          src={`/endfield-res/weapons/${it.id}.webp`}
+          src={img.weapons[it.id]}
           alt={lang.weapons[it.id]}
           width={256}
           height={256}

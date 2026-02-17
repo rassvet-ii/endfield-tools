@@ -52,7 +52,7 @@ You can [enable/disable HTML streaming](https://vike.dev/stream) for all or spec
 
 ## License
 
-This project is licensed under the MIT License, except for the `public/endfield-res` directory - see the LICENSE.md file for details.
+This project is licensed under the MIT License, except for the `assets/endfield-res` directory - see the LICENSE.md file for details.
 
 ## Contact
 
