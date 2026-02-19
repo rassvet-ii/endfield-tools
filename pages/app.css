@@ -11,7 +11,6 @@
 
 :root {
   interpolate-size: allow-keywords;
-  @apply transition opacity-100!;
 }
 
 *,
@@ -33,29 +32,81 @@
   --color-rarity-5: #ffba02;
   --color-rarity-6: #fd7000;
 
-  --image-stripe: none;
-  --background-image-stripe: var(--image-stripe);
-  --mask-image-stripe: var(--image-stripe);
-
   --transition-property-details: content-visibility, opacity, height;
 
   --clip-path-triangle-up: polygon(50% 0%, 0% 100%, 100% 100%);
-  /* --clip-path-triangle-up: polygon(50% 0%, 0% 100%, 100% 100%); */
 }
 
-@utility stripe-* {
-  --stripe-color: --value(--color-*, [*]);
-  --stripe-color: --alpha(--value(--color-*, [*]) / calc(1% * --modifier(number)));
-
+@utility bg-stripe-* {
+  --stripe-color: --value(--color-*, [color]);
+  --stripe-color: --alpha(--value(--color-*, [color]) / calc(1% * --modifier(number, [*])));
   --stripe-width: --value(number, [number]);
+
   /* biome-ignore format: too long */
-  --image-stripe: linear-gradient(-45deg,
-    transparent 0, transparent calc(25% - 0.25% * var(--stripe-width, 50)),
-    var(--stripe-color) 0, var(--stripe-color) calc(25% + 0.25% * var(--stripe-width, 50)),
-    transparent 0, transparent calc(75% - 0.25% * var(--stripe-width, 50)),
-    var(--stripe-color) 0, var(--stripe-color) calc(75% + 0.25% * var(--stripe-width, 50)),
+  background-image: linear-gradient(-45deg,
+    transparent 0, transparent calc(25% - 0.25% * var(--stripe-width)),
+    var(--stripe-color) 0, var(--stripe-color) calc(25% + 0.25% * var(--stripe-width)),
+    transparent 0, transparent calc(75% - 0.25% * var(--stripe-width)),
+    var(--stripe-color) 0, var(--stripe-color) calc(75% + 0.25% * var(--stripe-width)),
     transparent 0, transparent);
-  --background-image-stripe: var(--image-stripe);
+}
+
+@property --stripe-color {
+  syntax: '*';
+  inherits: false;
+  initial-value: currentcolor;
+}
+
+@property --stripe-width {
+  syntax: '*';
+  inherits: false;
+  initial-value: 50;
+}
+
+@utility bg-grid-* {
+  --grid-color: --value(--color-*, [color]);
+  --grid-color: --alpha(--value(--color-*, [color]) / calc(1% * --modifier(number, [*])));
+
+  /* biome-ignore format: too long */
+  background-image:
+    linear-gradient(0deg, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+}
+
+@property --grid-color {
+  syntax: '*';
+  inherits: false;
+  initial-value: currentcolor;
+}
+
+@theme inline {
+  --polygon-invert: 0 0, 100% 0, 100% 100%, 0 100%, 0 0;
+}
+
+@utility clip-path-arrow-se-* {
+  --arrow-width: --spacing(--value(number, [number]));
+  --arrow-width: --value(percentage, [percentage], --pixel-*, [*]);
+  --tw-shape:
+    0 100%, 100% 100%, 100% 0, calc(100% - var(--arrow-width)) 0,
+    calc(100% - var(--arrow-width)) calc(100% - var(--arrow-width) * (1 + cos(45deg))),
+    calc(var(--arrow-width) * cos(45deg)) 0, 0 0, 0 calc(var(--arrow-width) * cos(45deg)),
+    calc(100% - var(--arrow-width) * (1 + cos(45deg))) calc(100% - var(--arrow-width)),
+    0 calc(100% - var(--arrow-width));
+
+  clip-path: polygon(evenodd, var(--tw-shape));
+  clip-path: polygon(evenodd, --modifier(--polygon-*), var(--tw-shape));
+}
+
+@property --arrow-width {
+  syntax: '*';
+  inherits: false;
+  initial-value: 20%;
+}
+
+@property --tw-shape {
+  syntax: '*';
+  inherits: false;
+  initial-value: inset(0);
 }
 
 @theme {

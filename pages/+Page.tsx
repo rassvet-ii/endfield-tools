@@ -186,7 +186,7 @@ export default function RouteComponent() {
     const summary = (
       <summary className='aspect-square rounded-sm overflow-hidden grid *:area-1/1'>
         <div
-          className={`size-full bg-gray-900 stripe-gray-800 bg-stripe bg-size-4px/4px border-b-4 inset-shadow-[0px_-20px_20px_-20px] ${color}`}
+          className={`size-full bg-gray-900 bg-stripe-gray-800 bg-size-4px/4px border-b-4 inset-shadow-[0px_-20px_20px_-20px] ${color}`}
         />
         <img
           src={img.weapons[it.id]}
@@ -204,7 +204,7 @@ export default function RouteComponent() {
     const largeIcon = (
       <div className='size-40 aspect-square rounded-sm overflow-hidden grid *:area-1/1'>
         <div
-          className={`size-full bg-gray-900 stripe-gray-800 bg-stripe bg-size-4px/4px border-b-4 inset-shadow-[0px_-40px_40px_-40px] ${color}`}
+          className={`size-full bg-gray-900 bg-stripe-gray-800 bg-size-4px/4px border-b-4 inset-shadow-[0px_-40px_40px_-40px] ${color}`}
         />
         <img
           src={img.weapons[it.id]}
@@ -261,7 +261,7 @@ export default function RouteComponent() {
         onToggle={(it) => toggle([it.newState, index])}
         style={{ '--row': 2 * y + 2 }}
         className={clsx(
-          `group ${visible ? 'contents' : 'hidden'} details:col-span-full details:row-(--row) details:content-visibility-auto details:overflow-clip details:relative not-open:details:-z-10`,
+          `group ${visible ? 'contents' : 'hidden'} details:col-span-full details:row-(--row) details:content-visibility-auto details:overflow-clip details:relative open:details:z-10`,
           `details:transition-details details:duration-500 details:ease-in-out max-sm:details:transition-none`,
           open === index ? 'details:opacity-100' : 'details:opacity-0',
           y === activeY ? 'details:h-60' : 'details:h-0',
@@ -272,14 +272,14 @@ export default function RouteComponent() {
           <div className='row-span-full flex flex-col'>
             <div className='comment-chip text-xs'>FIGURE</div>
             {largeIcon}
-            <div className='mt-2 grow bg-stripe stripe-gray-300 bg-size-4px/4px' />
+            <div className='mt-2 grow bg-stripe-gray-300 bg-size-4px/4px' />
           </div>
           <div>
             <div className='comment-chip text-xs'>TITLE</div>
             <div className='px-2 py-1 flex gap-1 bg-gray-800 text-xl/none text-white rounded-xs'>
               <div className={`h-lh w-1 rounded-full ${bg_color}`} />
               <div className='-translate-y-px'>{lang.weapons[it.id]}</div>
-              <div className='grow bg-stripe stripe-gray-300/20 bg-size-4px/4px' />
+              <div className='grow bg-stripe-gray-300/20 bg-size-4px/4px' />
             </div>
           </div>
           <div>

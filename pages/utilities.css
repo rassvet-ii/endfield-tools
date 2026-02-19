@@ -64,7 +64,7 @@
   content: var(--tw-content);
 }
 
-@theme {
+@theme inline {
   --place-center-safe: safe center;
   --place-center-safe: safe end;
 }
@@ -98,7 +98,7 @@
   mask-image: --value(--mask-image-*);
 }
 
-@theme {
+@theme inline {
   --pixel-1px: 1px;
   --pixel-2px: 2px;
   --pixel-4px: 4px;
@@ -106,13 +106,13 @@
 }
 
 @utility bg-size-* {
-  background-size: --sizing(--value(integer));
+  background-size: --spacing(--value(integer));
   background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*);
-  background-size: --sizing(--value(integer)) --sizing(--modifier(integer));
-  background-size: --sizing(--value(integer))
+  background-size: --spacing(--value(integer)) --spacing(--modifier(integer));
+  background-size: --spacing(--value(integer))
     --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
   background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*)
-    --sizing(--modifier(integer));
+    --spacing(--modifier(integer));
   background-size: --value('auto', 'cover', 'contain', --pixel-*, --container-*)
     --modifier('auto', 'cover', 'contain', --pixel-*, --container-*);
 }

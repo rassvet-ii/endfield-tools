@@ -7,8 +7,8 @@ import vikeReact from 'vike-react/config';
 export default {
   extends: [vikeReact],
   // https://vike.dev/head-tags
-  title: 'My Vike App',
-  description: 'Demo showcasing Vike',
+  title: '武器選択',
+  description: '基質厳選補助ツール',
   lang: 'ja',
   prerender: true,
 } satisfies Config;
